@@ -1,6 +1,11 @@
-# Electiva1JohanRojas
-This is an academic project to develop a gift search app using Giphy API. Find gifts based on your preferences and interests.
+# Electiva 1
+## Team member
+- [Johan Alexander Rojas Suárez](https://github.com/joh4n-Geek)
+- 
+## Technology
+- <React>
+---
+# Jiphy App
+Academic project to develop a gift search app using Giphy API. Find gifts based on preferences and interests.
 
-<Electiva 1>
-Software engineer: Johan Alexander Rojas Suarez
-Technology: React
+## How to run the project
