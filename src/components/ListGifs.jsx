@@ -7,7 +7,6 @@ import './styles/ListGifs.css';
 export const ListGifs = ({ resultGifs, setResultGifs }) => {
     if (resultGifs.trending.length === 0 && Array.isArray(resultGifs.trending)) {
         getTrendingGifs().then(response => {
-            console.log('Hola desde getTrendingGifts en el componente ListGifts', response);
             setResultGifs({
                 trending: response
             });
@@ -24,6 +23,8 @@ export const ListGifs = ({ resultGifs, setResultGifs }) => {
                     350: 1
                 }}
             >
+                {/* For some reason, prop gutter does not work with strings */}
+                {/* It works with numbers but shows a console warning*/}
                 <Masonry gutter={10}>
                     {resultGifs.trending.map((gif, id) => {
                         return <Card resultGif={gif} key={id} />;
