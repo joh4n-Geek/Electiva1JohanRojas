@@ -22,6 +22,7 @@ export const SearchBar = ({ setResultGifs }) => {
                 value={inputQuery}
                 onChange={onInputChange} 
                 type="search" 
+                style={{marginBottom: 50}}
             />
         </>
     );
