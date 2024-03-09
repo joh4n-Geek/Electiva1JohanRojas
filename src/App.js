@@ -1,13 +1,19 @@
+import { useState } from "react";
+import Header from "./components/Header";
 import { ListGifs } from "./components/ListGifs";
 import { SearchBar } from "./components/SearchBar";
-import { getGifsByQuery } from "./components/helpers/getGifs";
 
 export default function MyApp() {
+    const [resultGifs, setResultGifs] = useState({
+        trending: [],
+        search: []
+    });
+
     return (
-        <div>
-            <h1>Bienvenido a Jiphy App</h1>
-            <SearchBar />
-            <ListGifs />
+        <div className="container">
+            <Header />
+            <SearchBar setResultGifs={setResultGifs} />
+            <ListGifs resultGifs={resultGifs} setResultGifs={setResultGifs} />
         </div>
     );
 }
